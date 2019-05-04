@@ -5,3 +5,7 @@
   background: #ccc;
   text-align: center;
 }
+
+.parentContainer input{
+  padding: 5px; width:300px; height: 20px;
+}

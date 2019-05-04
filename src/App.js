@@ -15,7 +15,7 @@ export default class App extends React.Component {
     };
   }
 
-  handleInput = (e) => {
+  handleSelectionInput = (e) => {
     this.setState({searchText:e.target.value});
     console.log(e.target.value);
 
@@ -24,7 +24,7 @@ export default class App extends React.Component {
     return (
       <div className="parentContainer">
         <h1>TODO APPLICATION</h1>
-        <InputField name={"searchEngine"} value={this.state.searchText} callback={this.handleInput} />
+        <InputField name={"searchEngine"} value={this.state.searchText} callback={this.handleSelectionInput} />
       </div>
     );
   }
