@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/App.css';
 import PropTypes from 'prop-types';
-import InputField from './shared/forms/fields/Utilities';
+import InputField from './shared/forms/fields/InputField';
 
 const propTypes = {};
 
