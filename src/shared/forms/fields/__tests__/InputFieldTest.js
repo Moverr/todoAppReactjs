@@ -16,7 +16,7 @@ describe("Main component", () => {
   let wrapper;
   let onSearchMock = jest.fn();
   beforeAll(() => {
-    wrapper = shallow(<InputField name={"testinput"} value={"testvalue"} callback={onSearchMock} />);
+    wrapper = shallow(<InputField name={"testButton"} value={"testValue"} callback={onSearchMock} />);
 
   });
 
@@ -31,6 +31,7 @@ describe("Main component", () => {
 
   it("should call on change", () => {
     wrapper.find("input").simulate('change', "text");
+   
     expect(onSearchMock).toHaveBeenCalledWith("text");
 
   });
