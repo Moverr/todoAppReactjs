@@ -13,5 +13,11 @@ const EnzymeAdapter = require('enzyme-adapter-react-16');
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 describe("Main component", () => {
  
+    let wrapper;
+    let onClickMock = jest.fn();
+
+    beforeAll(() => {
+        wrapper = shallow(<ButtonField   name={"testinput"} value={"testvalue"} callback={onClickMock}  />);
+    });
 
 });
