@@ -2,8 +2,8 @@ import React from 'react';
 // import { expect } from 'chai';
 import { shallow,render } from 'enzyme';
 import renderer from 'react-test-renderer';
-import InputField from '../shared/forms/fields/Utilities';
-
+import InputField from '../InputField';
+ 
 
 const Enzyme = require('enzyme');
 const EnzymeAdapter = require('enzyme-adapter-react-16');
