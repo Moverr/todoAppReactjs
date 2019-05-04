@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/App.css';
 import PropTypes from 'prop-types';
-import SearchButton from './Utilities';
+import InputField from './shared/forms/fields/Utilities';
 
 const propTypes = {};
 
@@ -20,7 +20,7 @@ export default class App extends React.Component {
     return (
       <div className="parentContainer">
         <h1>TODO APPLICATION</h1>
-        <SearchButton name={"testinput"} value={"testvalue"} callback={this.handleInput} />
+        <InputField name={"searchEngine"} value={""} callback={this.handleInput} />
       </div>
     );
   }

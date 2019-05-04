@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
- const SearchButton=(props)=>{
+ const InputField=(props)=>{
       return <input type={props.type} onChange={props.callback()} value={props.value} />;
 }
  
 
-export default SearchButton;
+export default InputField;

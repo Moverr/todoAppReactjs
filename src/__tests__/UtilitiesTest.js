@@ -2,7 +2,7 @@ import React from 'react';
 // import { expect } from 'chai';
 import { shallow,render } from 'enzyme';
 import renderer from 'react-test-renderer';
-import SearchButton from '../Utilities';
+import InputField from '../shared/forms/fields/Utilities';
 
 
 const Enzyme = require('enzyme');
@@ -17,10 +17,14 @@ describe("Main component", () => {
   beforeAll(() => {
    
     headerTitle = "TODO APPLICATION";
-    wrapper = shallow(<SearchButton name={"testinput"} value={"testvalue"}  callback={testChange}/>);
+    wrapper = shallow(<InputField name={"testinput"} value={"testvalue"}  callback={testChange}/>);
 
 });
 
+afterAll(()=>{
+wrapper.unMount();
+});
+ 
   const testChange = (value)=>{
     return value;
   }
