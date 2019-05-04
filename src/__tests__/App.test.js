@@ -22,17 +22,9 @@ describe("Main component", () => {
     expect(wrapper.find('div').hasClass('parentContainer')).toEqual(true);
   });
 
-it('Header with title', () => {
+  it('Header with title', () => {
     expect(wrapper.find('h1').text()).toEqual(headerTitle);
   });
 
-  
-  /*
-it('Header with title', () => {
-    expect(wrapper.find('h1').text()).toNotEqual('  WRONG HEADER');
-  });
-  */
-  
-  
 
 });

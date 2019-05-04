@@ -8,6 +8,7 @@ import InputField from '../InputField';
 const Enzyme = require('enzyme');
 const EnzymeAdapter = require('enzyme-adapter-react-16');
 
+
 // Setup enzyme's react adapter
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 describe("Main component", () => {
@@ -33,15 +34,5 @@ describe("Main component", () => {
     expect(onSearchMock).toHaveBeenCalledWith("text");
 
   });
-  /*
-it('Header with title', () => {
-    expect(wrapper.find('h1').text()).to.equal(headerTitle);
-  });
-
-  
-it('Header with title', () => {
-    expect(wrapper.find('h1').text()).to.not.equal('  WRONG HEADER');
-  });
-  
-*/
+ 
 });
