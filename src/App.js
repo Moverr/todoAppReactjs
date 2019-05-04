@@ -1,15 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './css/App.css';
+import PropTypes from 'prop-types';
+import SearchButton from './Utilities';
 
-function App() {
-  return (
-    <div className="parentContainer">
-       <h1>TODO APPLICATION</h1>
-    </div>
-  );
+const propTypes = {};
+
+const defaultProps = {};
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  handleInput = (value) => {
+
+  }
+  render() {
+    return (
+      <div className="parentContainer">
+        <h1>TODO APPLICATION</h1>
+        <SearchButton name={"testinput"} value={"testvalue"} callback={this.handleInput} />
+      </div>
+    );
+  }
 }
 
-
-
-export default App;
+App.propTypes = propTypes;
+App.defaultProps = defaultProps;

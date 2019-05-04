@@ -1,11 +1,6 @@
 import React from 'react';
-
-
-import { expect } from 'chai';
+//import { expect } from 'chai';
 import { shallow } from 'enzyme';
-
-
-
 import App from '../App';
 
 
@@ -14,14 +9,6 @@ const EnzymeAdapter = require('enzyme-adapter-react-16');
 
 // Setup enzyme's react adapter
 Enzyme.configure({ adapter: new EnzymeAdapter() });
-
-
-
-
-
-//Enzyme.configure({ adapter: new Adapter() });
-
-
 describe("Main component", () => {
 
   let headerTitle;
@@ -32,17 +19,20 @@ describe("Main component", () => {
   });
 
   it('renders without crashing', () => {
-    expect(wrapper.find('div').hasClass('parentContainer')).to.equal(true);
+    expect(wrapper.find('div').hasClass('parentContainer')).toEqual(true);
   });
 
 it('Header with title', () => {
-    expect(wrapper.find('h1').text()).to.equal(headerTitle);
+    expect(wrapper.find('h1').text()).toEqual(headerTitle);
   });
 
   
+  /*
 it('Header with title', () => {
-    expect(wrapper.find('h1').text()).to.not.equal('  WRONG HEADER');
+    expect(wrapper.find('h1').text()).toNotEqual('  WRONG HEADER');
   });
+  */
+  
   
 
 });
