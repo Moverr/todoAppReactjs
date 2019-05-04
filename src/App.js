@@ -10,17 +10,21 @@ const defaultProps = {};
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      searchText:""
+    };
   }
 
-  handleInput = (value) => {
+  handleInput = (e) => {
+    this.setState({searchText:e.target.value});
+    console.log(e.target.value);
 
   }
   render() {
     return (
       <div className="parentContainer">
         <h1>TODO APPLICATION</h1>
-        <InputField name={"searchEngine"} value={""} callback={this.handleInput} />
+        <InputField name={"searchEngine"} value={this.state.searchText} callback={this.handleInput} />
       </div>
     );
   }

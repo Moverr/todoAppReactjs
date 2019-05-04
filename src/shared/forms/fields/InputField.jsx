@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
+
 
  const InputField=(props)=>{
-      return <input type={props.type} onChange={props.callback()} value={props.value} />;
+      return <input type={props.type} onChange={props.callback} value={props.value} />;
 }
  
 
