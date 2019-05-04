@@ -34,5 +34,5 @@ describe("Main component", () => {
     expect(onSearchMock).toHaveBeenCalledWith("text");
 
   });
- 
+
 });
