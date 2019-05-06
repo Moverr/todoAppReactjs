@@ -17,9 +17,12 @@ describe("Main component", () => {
     let onClickMock = jest.fn();
 
     beforeAll(() => {
-        wrapper = shallow(<ButtonField value={"GO"} type={"button"} callback={onClickMock} />);
+        wrapper = shallow(<ButtonField value={"bbb"} type={"button"} callback={onClickMock} />);
     });
 
+    afterAll(() => {
+        wrapper.unMount();
+    });
     it('render correctly text component', () => {
         expect(wrapper).toMatchSnapshot();
 
