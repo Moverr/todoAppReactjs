@@ -17,7 +17,7 @@ describe("Main component", () => {
   let onClickMock = jest.fn();
   beforeAll(() => {
     wrapper = shallow(<App />);
-    instance =  wrapper.instance();
+    instance = wrapper.instance();
     headerTitle = "TODO APPLICATION";
   });
 
@@ -30,32 +30,32 @@ describe("Main component", () => {
   });
 
 
-  
- 
-  it("Test handleSelectionInput", ()=>{
+
+
+  it("Test handleSelectionInput", () => {
     expect(wrapper.state('searchText')).toBe("");
-    instance.handleSelectionInput( { target: { name: 'input', value: '02' }});
+    instance.handleSelectionInput({ target: { name: 'input', value: '02' } });
     expect(wrapper.state('searchText')).toBe("02");
-    
+
   });
 
-  it("Test handleClick", ()=>{
-    instance.handleSelectionInput( { target: { name: 'input', value: '02' }});
+  it("Test handleClick", () => {
+    instance.handleSelectionInput({ target: { name: 'input', value: '02' } });
     expect(wrapper.state('searchText')).toBe("02");
     instance.handleClick();
     let listItems = new Array();
     listItems.push("02");
     expect(wrapper.state('list')).toEqual(listItems);
-     });
+  });
 
-     it("Test handleClick", ()=>{
-      instance.handleSelectionInput( { target: { name: 'input', value: '' }});
-      expect(wrapper.state('searchText')).toBe("");
-      instance.handleClick();
-      let listItems = new Array();
-      listItems.push("02");
-      expect(wrapper.state('list')).toEqual(listItems);
-       });
-  
+  it("Test handleClick", () => {
+    instance.handleSelectionInput({ target: { name: 'input', value: '' } });
+    expect(wrapper.state('searchText')).toBe("");
+    instance.handleClick();
+    let listItems = new Array();
+    listItems.push("02");
+    expect(wrapper.state('list')).toEqual(listItems);
+  });
+
 
 });
